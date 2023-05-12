@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+label, input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+}
+
+#senhaGerada {
+    margin-top: 20px;
+    font-size: 18px;
+}
