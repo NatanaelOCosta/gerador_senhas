@@ -243,5 +243,4 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
   }
 
   /* Outros estilos para se adaptar à tela do smartphone */
-  /* ... */
 }
