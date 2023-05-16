@@ -259,6 +259,11 @@ footer {
   width: 100%;
 }
 
+a#autor {
+  color: white;
+  text-decoration: none;
+}
+
 /* Estilos para o texto no footer */
 footer p {
   margin: 0;
