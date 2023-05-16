@@ -51,15 +51,52 @@ function calcularForcaSenha() {
     if (incluiCaracteresEspeciais) {
       forcaSenha++;
     }
+
+    if (forcaSenha === 0){
+        return -1;
+    } else if (forcaSenha === 1 && tamanho >= 1 && tamanho <= 4){
+        return 0;
+    } else if (forcaSenha === 1 && tamanho >= 5 && tamanho <= 7){
+        return 1;
+    } else if (forcaSenha === 1 && tamanho >= 8 && tamanho <= 9){
+        return 2;
+    } else if (forcaSenha === 1 && tamanho >= 10 && tamanho <= 12){
+        return 3;
+    } else if (forcaSenha === 1 && tamanho >= 13){
+        return 4;
+    } else if (forcaSenha === 2 && tamanho >= 1 && tamanho <= 4){
+        return 0;
+    } else if (forcaSenha === 2 && tamanho >= 5 && tamanho <= 7){
+        return 1;
+    } else if (forcaSenha === 2 && tamanho >= 8 && tamanho <= 9){
+        return 2;
+    } else if (forcaSenha === 2 && tamanho >= 10 && tamanho <= 11){
+        return 3;
+    } else if (forcaSenha === 2 && tamanho >= 12){
+        return 4;
+    } else if (forcaSenha === 3 && tamanho >= 1 && tamanho <= 4){
+        return 0;
+    } else if (forcaSenha === 3 && tamanho >= 5 && tamanho <= 7){
+        return 1;
+    } else if (forcaSenha === 3 && tamanho >= 8 && tamanho <= 9){
+        return 2;
+    } else if (forcaSenha === 3 && tamanho >= 10 && tamanho <= 11){
+        return 3;
+    } else if (forcaSenha === 3 && tamanho >= 12){
+        return 4;
+    } else if (forcaSenha === 4 && tamanho >= 1 && tamanho <= 4){
+        return 0
+    } else if (forcaSenha === 4 && tamanho >= 5 && tamanho <= 7){
+        return 1;
+    } else if (forcaSenha === 4 && tamanho >= 8 && tamanho <= 9){
+        return 2;
+    } else if (forcaSenha === 4 && tamanho >= 10 && tamanho <= 11){
+        return 3;
+    } else if (forcaSenha === 4 && tamanho >= 12){
+        return 4;
+    } else return forcaSenha;
+  }
   
-    if (forcaSenha === 0) {
-      return -1; // Nenhum elemento está marcado
-    } else if (forcaSenha === 4 && tamanho >= 8) {
-      return 4; // Todos os elementos estão marcados e tamanho é maior ou igual a 8
-    } else {
-      return forcaSenha;
-    }
-}
 
 function mostrarMensagemForcaSenha(forcaSenha) {
   var status = document.getElementById("status");
@@ -127,12 +164,16 @@ window.onload = function() {
     var slider = document.getElementById("tamanho");
     slider.value = parseInt(slider.value) - 1;
     updateSliderValue();
+    gerarSenha();
+    atualizarMensagemForcaSenha();
     }
     
     function increaseSliderValue() {
     var slider = document.getElementById("tamanho");
     slider.value = parseInt(slider.value) + 1;
     updateSliderValue();
+    gerarSenha();
+    atualizarMensagemForcaSenha();
     }
     
     function updateSliderValue() {
