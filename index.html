@@ -13,25 +13,38 @@
                     <input type="range" min="4" max="58" value="16" class="slider" id="tamanho" oninput="updateSliderValue()">                   
                     <button type="button" class="increase-btn btnAdcRm" onclick="increaseSliderValue()">+</button>
                 </div>                
-
                 <p>Parâmetros</p>
-                <input type="checkbox" id="incluiMaiusculas" checked>
-                <label for="incluiMaiusculas">ABC</label>
+                <div class="parametros">
+                    <label>
+                        <input type="checkbox" id="incluiNumeros" checked>
+                        <span class="custom-checkbox"></span>
+                        <span class="checkbox-label" for="incluiNumeros">123</span>
+                    </label>
 
-                <input type="checkbox" id="incluiMinusculas" checked>
-                <label for="incluiMinusculas">abc</label>
+                    <label>
+                        <input type="checkbox" id="incluiMaiusculas" checked>
+                        <span class="custom-checkbox"></span>
+                        <span class="checkbox-label" for="incluiMaiusculas">ABC</span>
+                    </label>
 
-                <input type="checkbox" id="incluiNumeros" checked>
-                <label for="incluiNumeros">123</label>
+                    <label>
+                        <input type="checkbox" id="incluiMinusculas" checked>
+                        <span class="custom-checkbox"></span>
+                        <span class="checkbox-label" for="incluiMinusculas">abc</span>
+                    </label>
 
-                <input type="checkbox" id="incluiCaracteresEspeciais">
-                <label for="incluiCaracteresEspeciais">#$@&</label>
+                    <label>
+                        <input type="checkbox" id="incluiCaracteresEspeciais">
+                        <span class="custom-checkbox"></span>
+                        <span class="checkbox-label" for="incluiCaracteresEspeciais">#$@&</span>
+                    </label>
+                </div>
             </form>
             <div id="senha">
                 <div id="senhaGerada"></div>
                 <button type="button" onclick="gerarSenha()"><span>&#x21bb;</span></button>
             </div>
-            <button type="button" onclick="copiarSenhaParaClipboard()">Copiar senha</button>
+            <button type="button" onclick="copiarSenhaParaClipboard()" class="botao">Copiar senha</button>
             <div id="mensagem">
                 <button id="fechar-mensagem" onclick="fecharMensagem()"></button>
                 <p id="mensagem-texto">Senha copiada com sucesso!</p>
