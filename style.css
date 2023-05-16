@@ -38,6 +38,19 @@ header h1 {
   width: 100%;
 }
 
+#status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 5px 10px #ccc;
+}
+
 .parametros {
   display: flex;
   flex-direction: row;
@@ -243,6 +256,7 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
 
 #senhaGerada {
   width: 250px;
+  height: 20px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

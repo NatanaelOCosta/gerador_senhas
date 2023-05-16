@@ -60,29 +60,42 @@ function calcularForcaSenha() {
       return forcaSenha;
     }
 }
-  
-
 
 function mostrarMensagemForcaSenha(forcaSenha) {
   var status = document.getElementById("status");
   var forcaTexto = "";
 
   if (forcaSenha === 0) {
-    forcaTexto = "Senha muito fraca";
+    forcaTexto = "MUITO FRACA";
   } else if (forcaSenha === 1) {
-    forcaTexto = "Senha fraca";
+    forcaTexto = "FRACA";
   } else if (forcaSenha === 2) {
-    forcaTexto = "Senha moderada";
+    forcaTexto = "MODERADA";
   } else if (forcaSenha === 3) {
-    forcaTexto = "Senha forte";
+    forcaTexto = "FORTE";
   } else if (forcaSenha === 4) {
-    forcaTexto = "Senha muito forte";
+    forcaTexto = "MUITO FORTE";
   } else {
-    forcaTexto = "Senha indefinida";
+    forcaTexto = "INDEFINIDA";
   }
 
-  status.textContent = "Força da senha: " + forcaTexto;
+  status.textContent = forcaTexto;
+
+  if (status.textContent === "MUITO FRACA"){
+    status.style.backgroundColor = "#8B0000";
+  } else if (status.textContent === "FRACA"){
+    status.style.backgroundColor = "#8B0000";
+  } else if (status.textContent === "MODERADA"){
+    status.style.backgroundColor = "#FFD700	";
+  } else if (status.textContent === "FORTE"){
+    status.style.backgroundColor = "#228B22	";
+  } else if (status.textContent === "MUITO FORTE"){
+    status.style.backgroundColor = "#007bff";
+  } else {
+    status.style.backgroundColor = "grey";
+  }
 }
+
 
 function atualizarMensagemForcaSenha() {
   var forcaSenha = calcularForcaSenha();
