@@ -103,12 +103,13 @@ label {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.btnAdcRm:hover {
-  background-color: gray;
-  color: white;
+.btnAdcRm:hover,
+.btnAdcRm:focus {
+  outline: 1px solid gray;
+  outline-offset: 2px;
+  color: gray;
 }
 
 
@@ -208,8 +209,10 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
   transition: background-color 0.3s ease;
 }
 
-.botao:hover {
-  background-color: #0056b3;
+.botao:hover,
+.botao:focus {
+  outline: 3px solid #007bff;
+  outline-offset: 1px;
 }
 
 #mensagem {
